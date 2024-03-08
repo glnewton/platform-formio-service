@@ -1,10 +1,10 @@
 {
   "port": 3001,
   "appPort": 8080,
-  "host": "localhost:3001",
+  "host": "https://platform-formio-service.onrender.com:3001",
   "protocol": "http",
   "allowedOrigins": ["*"],
-  "domain": "https://platform-formio-service.onrender.com/:3001",
+  "domain": "https://platform-formio-service.onrender.com:3001",
   "basePath": "",
   "mongo": "mongodb+srv://admin:asdfasdf@cluster0.o2ocupj.mongodb.net/PHS_FORMS?retryWrites=true&w=majority",
   "mongoConfig": "",
