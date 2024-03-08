@@ -19,7 +19,13 @@ const debug = {
 global.Text              = class {};
 global.HTMLElement       = class {};
 global.HTMLCanvasElement = class {};
-global.navigator         = {userAgent: ''};
+// global.navigator         = {userAgent: ''};
+if (typeof global.navigator === 'undefined') {
+  Object.defineProperty(global, 'navigator', {
+    value: { userAgent: 'custom' },
+    writable: true
+  });
+}
 global.document          = {
   createElement: () => ({}),
   cookie: '',
