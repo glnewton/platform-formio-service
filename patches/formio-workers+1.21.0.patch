@@ -1,0 +1,20 @@
+diff --git a/node_modules/formio-workers/Formio.js b/node_modules/formio-workers/Formio.js
+index 8ef40ca..ec1b8a9 100644
+--- a/node_modules/formio-workers/Formio.js
++++ b/node_modules/formio-workers/Formio.js
+@@ -22,7 +22,14 @@ const vm = new VM({
+ global.Text              = class {};
+ global.HTMLElement       = class {};
+ global.HTMLCanvasElement = class {};
+-global.navigator         = {userAgent: ''};
++// global.navigator         = {userAgent: ''};
++if (typeof global.navigator === 'undefined') {
++  Object.defineProperty(global, 'navigator', {
++    value: { userAgent: 'custom' },
++    writable: true
++  });
++}
++
+ global.document          = {
+   createElement: () => ({}),
+   cookie: '',

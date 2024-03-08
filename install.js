@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 const prompt = require('prompt');
 const async = require('async');
 const fs = require('fs-extra');
